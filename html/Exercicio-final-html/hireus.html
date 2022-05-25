@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpaceX</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="img/logo.png" alt="logo"></a><span> | </span><a href="spaceships.html"> The Spaceships </a><span> | </span><a href="hireus.html"> Hire Us</a>
+    </header>
+    <hr>
+    <main>
+        <h2>Hire Us Now</h2>
+        <p>Leave a message to request on of our services and we will get back to you as soon as possible</p>
+        <br><br>
+        <div>
+            <form action="">
+                <div>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name"> - 
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+                <br><br>
+                <div>
+                    <label for="spaceship">Spaceship</label> 
+                    <select name="spaceship" id="spaceship">
+                        <option value="Falcon 9">falcon 9</option>
+                        <option value="Falcon Heavy">falcon heavy</option>
+                    </select> |
+                    <label for="service">Type of Service</label> <input type="search" name="service" id="service" list="services">
+                    <datalist id="services">
+                        <option value="Lorem ipsum dolor sit amet"></option>
+                        <option value="Lorem ipsum dolor sit amet consec"></option>
+                        <option value="Lorem ipsum dolor sit al"></option>
+                        <option value="Lorem ipsum dolor sit amet consectetur"></option>
+                    </datalist>
+                </div>
+                <br><br>
+                <div>
+                    <input type="submit" value="Send Message">
+                </div>
+                
+            </form>
+        </div>
+    </main>
+    
+</body>
+</html>
