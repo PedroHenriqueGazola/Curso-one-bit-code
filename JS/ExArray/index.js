@@ -8,8 +8,11 @@ var FirstSpaceshipFalse = hitchedSpaceships.findIndex(element => { return elemen
 
 var nameSpaceship = hitchedSpaceships.map(element => { return element[0].toUpperCase()})
 
+
 alert("Naves com mais de 9 passageiros: " + moreThan9Name.join(", ")
     + "\nA platafor da primeira nave que esta com o engate pendente: " + (FirstSpaceshipFalse + 1)
     + "\nNomes das naves: " + nameSpaceship.join(", ")
 )
+
+
 
