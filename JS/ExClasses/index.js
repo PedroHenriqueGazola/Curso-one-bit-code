@@ -1,4 +1,4 @@
-class Spaceship {
++class Spaceship {
     constructor(name, crewQuantity) {
         this.name = name
         this.crewQuantity = crewQuantity
