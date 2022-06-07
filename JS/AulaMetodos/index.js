@@ -11,6 +11,16 @@ class spaceship {
 
 var mySpaceship = new spaceship("Pedro", "batalha")
 
+console.log(mySpaceship);
+
 mySpaceship.speedUp(15);
 
 console.log(mySpaceship);
+
+mySpaceship.speedUp(15);
+
+console.log(mySpaceship);
+
+var otherSpaceship = new spaceship("Maria");
+
+console.log(otherSpaceship);
