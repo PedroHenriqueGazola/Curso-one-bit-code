@@ -6,14 +6,14 @@ class captain {
     }
 }
 
-class spaceship {
-    constructor (name, tripulantes, captainName, captainAge, captainFlightHours) {
-        this.name = name
-        this.tripulantes = tripulantes
+class spaceship  {
+    constructor (Spaceshipname, SpaceshipType, captainName, captainAge, captainFlightHours) {
+        this.Spaceshipname = Spaceshipname
+        this.SpaceshipType = SpaceshipType
         this.captain = new captain(captainName, captainAge, captainFlightHours)
     }
 }
 
-var spaceship1 = new spaceship("SpaceX", "100", "John", "30", "200")
+var spaceship1 = new spaceship("Elemental", "SpaceX", "John", 30, 200);
 
-console.log(spaceship1)
+console.log(spaceship1);
