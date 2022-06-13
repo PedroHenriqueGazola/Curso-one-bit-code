@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Eventos Js
+    </title>
+</head>
+<body>
+    <p>
+        <button onclick="clickMe()">Clique-me</button>
+    </p>
+    <p>
+        focus
+        <input type="text" name="focus-text" onfocus="focusMe()" id=""> <!-- Quando clickar na caixa de texto, dispara a funçao focusMe()-->
+    </p>
+    <p>
+        blur
+        <input type="text" name="blur-text" onblur="blurMe()" id=""> <!-- Quando clicar fora da caixa de texto, dispara a funçao blurMe()-->
+    </p>
+    <p>
+        change
+        <input type="text" name="change-text" onchange="changeMe()" id=""> <!-- Quando alterar o conteudo da caixa de texto, dispara a funçao changeMe()-->
+    </p>
+    <p onmouseover="overMe()">Passe o mouse sobre mim</p> <!-- Quando passar o mouse sobre a tag, dispara a funçao overMe()-->
+
+
+    <script src="index.js"></script>
+</body>
+</html>
