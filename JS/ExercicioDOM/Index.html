@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <form>
+        <h1>Registre sua casa</h1>
+        <p>
+            <label for="numberHouse">Qual o numero de sua casa?</label>
+            <input type="text" name="numberHouse" id="numberHouse">
+        </p>
+        <p>
+            <label for="neighborhood">Qual o bairro?</label>
+            <input type="text" name="neighborhood" id="neighborhood">
+        </p>
+        <p>
+            <label for="city">Qual a cidade?</label>
+            <input type="text" name="city" id="city">
+        </p>
+        <button id="button" onclick="adicionar()" type="button">Adicionar</button>
+    </form>
+    <div id="list"></div>
+    <ul id="house-list"></ul>
+    <script src="Index.js"></script>
+</body>
+</html>
