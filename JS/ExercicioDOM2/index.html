@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM</title>
+    <link rel="stylesheet" href="style/estilo.css">
+</head>
+<body>
+    <section>
+        <form onsubmit="formulario()">
+            <h1>Cadastro de Imóveis</h1>
+            <p>
+                <label for="name">Qual o nome do imovel?</label>
+                <input type="text" id="name" name="name">
+            </p>
+            <p>
+                <label for="typeImovel">Tipo do imovél</label>
+                <select name="typeImovel" id="typeImovel">
+                    <option value="Casa">Casa</option>
+                    <option value="Apartamento">Apartamento</option>
+                </select>
+            </p>
+            <p>
+                <label for="areaImovel">Qual a area do imovel?</label> 
+                <input type="text" name="areaImovel" id="areaImovel"> m²
+            </p>
+            <p>
+                <label for="">O imovel esta alugado?</label>
+                <input type="radio" name="conditionImovel" id="conditionImovel" value="Sim">Sim 
+                <input type="radio" name="conditionImovel" id="conditionImovel" value="Não">Não
+            </p>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    <div id="res">
+        Lista de Imóveis cadastrados:
+    </div>
+    <footer>
+        <p>&copy;BlackBelt</p>
+    </footer>
+
+    <script src="JS/imovel.js"></script>
+    <script src="JS/index.js"></script>
+</body>
+</html>
