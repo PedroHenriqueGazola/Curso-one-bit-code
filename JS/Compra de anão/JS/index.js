@@ -3,8 +3,9 @@ function cadastro() {
     var name = document.querySelector("input[name='name']").value; // seleciona o input com o name name
     var idade = document.querySelector("input[name='age']").value; // seleciona o input com o name age
     var size = document.querySelector("input[name='size']").value; // seleciona o input com o name size
-    
-    var text = `Nome: ${name} - Idade: ${idade} anos - Tamanho: ${size} cm`; // cria uma string com os valores do input
+    var price = document.querySelector("input[name='price']").value; // seleciona o input com o name price 
+
+    var text = `Nome: ${name} - Idade: ${idade} anos - Tamanho: ${size} cm - Preço: ${price} R$` ; // cria uma string com os valores do input
     var newList = document.createElement("li"); // cria um elemento li
     
     newList.innerText = text; // seta o valor do li com o valor da string criada acima
