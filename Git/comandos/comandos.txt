@@ -1,0 +1,15 @@
+git cd = abrir o diretorio
+git add = adicionar o arquivo ao repositorio
+git commit -m 'descriçao' = commitar o arquivo 
+git push = enviar o arquivo para o repositorio remoto
+git pull = baixar o arquivo do repositorio remoto
+git status = verificar o status do repositorio
+git log = verificar o historico do repositorio
+git diff = verificar o diferencial do repositorio
+git diff <arquivo> = verificar o diferencial do arquivo
+git checkout -- <arquivo> = restaurar o arquivo do ultimo commit
+git checkout <commit> <arquivo> = restaurar o arquivo do commit especificado
+git reset -- <arquivo> = restaurar o arquivo do ultimo add
+history = ver o historico do repositorio
+git log --oneline = ver o historico do repositorio em linhas
+git log --pretty = ver o historico do repositorio em formato
