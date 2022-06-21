@@ -11,3 +11,21 @@ function resultado() {
         document.getElementById("resultado").innerHTML = eval(resultado)
     }
 }
+function menosmais() {
+    var resultado = document.getElementById("resultado").innerHTML
+    if (resultado) {
+        document.getElementById("resultado").innerHTML = "-" + resultado
+    }
+}
+function raiz() {
+    var resultado = document.getElementById("resultado").innerHTML
+    if (resultado) {
+        document.getElementById("resultado").innerHTML = Math.sqrt(resultado)
+    }
+}
+function porcentagem() {
+    var resultado = document.getElementById("resultado").innerHTML
+    if (resultado) {
+        document.getElementById("resultado").innerHTML = resultado + "/100" + "*"
+    }
+}
