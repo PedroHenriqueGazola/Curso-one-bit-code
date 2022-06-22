@@ -1,4 +1,4 @@
-git cd = abrir o diretorio
+cd = abrir o diretorio
 git add = adicionar o arquivo ao repositorio
 git commit -m 'descriçao' = commitar o arquivo
 git push = enviar o arquivo para o repositorio remoto
@@ -22,3 +22,5 @@ git branch <nome da branch> = criar uma branch
 git checkout <branch> = navegar para uma branch especifica
 git branch -D <branch> = deletar uma branch
 git merge <branch> = mesclar duas branches (obs: para fundir um branch com a main, vc deve estar na branch main  e dar o comando com a branch que deseja mesclar.)
+git clone <url do repositorio> = clonar um repositorio
+code . = abre o visual studio code com  o repositorio atual
