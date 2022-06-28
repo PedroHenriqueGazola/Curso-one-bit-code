@@ -1,29 +1,30 @@
-const { watch } = require('fs');
-const path = require('path');
+const path = require("path")
 
 module.exports = {
-    entry: {
-        index: './src/index.js', // indica que o arquivo de entrada é o index.js//
-        galaxy: './src/galaxy.js'
-    },
-    
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-    },
+  entry: {
+    index: './src/index.js'
+  },
 
-    module: {
-        rules: [
-            {
-                test: /\.js$/,
-                use: ['babel-loader'],
-            }
-        ]
-    },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  },
 
-    devServer: {
-        contentBase: path.join(__dirname, 'dist'),
-        watchContentBase: true,
-        liveReload: true,
-    }
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: ['babel-loader']
+      }
+    ]
+  },
+
+  watch: true,
+
+  devServer:{
+    static: path.resolve(__dirname, 'dist'),
+    port: 8080,
+    open: true,
+    hot: true
+}
 }
