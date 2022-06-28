@@ -1,0 +1,2 @@
+console.log('Testando NPX e NPM');  // npm install http-server --global, usado para criar um servidor local.
+// "build": "npx babel index.js -o tranpiled.js", adicionar isso no package.json, script, para criar um comando, simplificar o processo de transpilação.
