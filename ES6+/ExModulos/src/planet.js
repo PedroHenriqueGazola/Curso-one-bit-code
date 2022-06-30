@@ -5,4 +5,4 @@ class planet {
     }
 }
 
-module.exports = planet;
+export default planet;
