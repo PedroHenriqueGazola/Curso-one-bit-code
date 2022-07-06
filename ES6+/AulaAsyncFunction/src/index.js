@@ -41,11 +41,21 @@ async function fire(x, y, z) {
     laserGun.firing = true
     return([x, y, z])
 }
+function loadAmmo() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve('Arma carregada')
+        }, 5000)
+    })
+}
 async function moveAndFire(x, y, z) {
     try {
-        let newCoordinates = await adjustPosition(x, y, z) // o await faz com que o programa espere a Promise ser resolvida para continuar, ou seja, o programa espera que a Promise seja resolvida, se a Promise não for resolvida, o programa não continua. O resultado da Promise é retornado para uma variável, substituindo o then.
+        const newCoordinatesPromise = adjustPosition(x, y, z)
+        const loadAmmoPromise = loadAmmo()
+        let promiseResult = await Promise.all([newCoordinatesPromise, loadAmmoPromise]) // o await faz com que o codigo abaixo espera a execusao das promises para continuar, nesse caso a function loadAmmo tem o setTimeout de 5 segundos, atrasando a execuçao do codigo abaixo
+        let newCoordinates = promiseResult[0]
         console.log(`Arma ajustada para as coordenadas (${newCoordinates[0]}, ${newCoordinates[1]}, ${newCoordinates[2]})`)
-        let fireCoord = await fire(...newCoordinates)
+        let fireCoord = await fire(...newCoordinates)// o await faz com que o programa espere a Promise ser resolvida para continuar, ou seja, o programa espera que a Promise seja resolvida, se a Promise não for resolvida, o programa não continua. O resultado da Promise é retornado para uma variável, substituindo o then.
         console.log(`Começando a atirar nas coordenadas (${fireCoord[0]}, ${fireCoord[1]}, ${fireCoord[2]})`)
     } catch (error) {
         console.log(error)
