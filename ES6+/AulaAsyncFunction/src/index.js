@@ -29,6 +29,9 @@ function moveAndFire(x, y, z) {
 moveAndFire(20, 40, 10)*/
 
 async function adjustPosition(x, y, z) { // A async function retorna uma Promise, logo n é necessário usar o resolve e sim o return
+    if(z > 90) {
+        return Promise.reject ('Não é possível ajustar a arma para uma posição com o Z maior que 90') // Tratando erro em funçao assincrona 
+    }
     laserGun.currentPosition = [x, y, z]
     return([x, y, z])
 }
@@ -42,6 +45,8 @@ async function moveAndFire(x, y, z) {
         return fire(...coord) 
     }).then(coord => {
         console.log(`Começando a atirar nas coordenadas (${coord[0]}, ${coord[1]}, ${coord[2]})`)
+    }).catch(err => {
+        console.log(err)
     })
 }
 moveAndFire(20, 40, 10)
