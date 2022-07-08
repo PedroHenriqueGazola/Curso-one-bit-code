@@ -1,11 +1,11 @@
 import GrayImg from "../../shared/gray_image";
 
-const Planet = () => {
+const Planet = (props) => {
     return (
         <div>
-            <h4>Mercury</h4>
-            <p>legenda</p>
-            <GrayImg />
+            <h4>{props.name}</h4>
+            <p>{props.description}</p>
+            <GrayImg img_url = {props.img_url}/>
         </div>
     );
 }

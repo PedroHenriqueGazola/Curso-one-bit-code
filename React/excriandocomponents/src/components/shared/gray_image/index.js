@@ -1,9 +1,9 @@
 import  './style.css';
 
-const GrayImg = () => {
+const GrayImg = (props) => {
     return (
         <div className="gray-image">
-            <img class= "img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/1024px-Mercury_in_color_-_Prockter07-edit1.jpg" alt=""></img>
+            <img class= "img" src = {props.img_url} alt=""></img>
         </div>
     );
 }
