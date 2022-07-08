@@ -1,10 +1,10 @@
 import GrayImg from "../../shared/gray_image";
-
+import DescriptionWithLink from "../../shared/DescripitionWithLink";
 const Planet = (props) => {
     return (
         <div>
             <h4>{props.name}</h4>
-            <p>{props.description}</p>
+            <DescriptionWithLink text = { props.text} link = {props.link} />
             <GrayImg img_url = {props.img_url}/>
         </div>
     );
