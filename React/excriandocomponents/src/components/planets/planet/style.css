@@ -1,0 +1,8 @@
+.img {
+    width: 300px;
+    height: 300px;
+    filter: grayscale(100%);
+}
+body {
+    padding-left: 30px;
+}
