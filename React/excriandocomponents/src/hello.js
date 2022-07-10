@@ -1,5 +1,5 @@
-const HelloWord = () => {
-    return <h1>Hello word</h1>;
+const HelloWorld = () => {
+    return <h1>Hello world</h1>;
 }
 
-export default HelloWord;
+export default HelloWorld;
