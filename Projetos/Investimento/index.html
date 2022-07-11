@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investimento</title>
+</head>
+<body>
+
+    <h1>Investimento</h1>
+    <form onsubmit="calcular()">
+        <p>
+            <label for="dinheiroInicial">Qual dinheiro inicial?</label>
+            <input type="text" name="dinheiroInicial" id="dinheiroInicial">
+        </p>
+        <p>
+            <label for="">Qual o aporte mensal?</label>
+            <input type="text" name="dinheiroInvestidoMensal" id="dinheiroInvestidoMensal">
+        <p>
+            <label for="">Qual a taxa de juros?</label>
+            <input type="text" name="taxaJuros" id="taxaJuros">
+        </p>
+        <p>
+            <label for="">Qual o prazo?</label>
+            <input type="text" name="tempoInvestido" id="tempoInvestido">
+        </p>
+        <p>
+            <button type="submit">Calcular</button>
+        </p>
+    </form>
+
+    <div id="res"></div>
+
+    <script src="index.js"></script>
+</body>
+</html>
