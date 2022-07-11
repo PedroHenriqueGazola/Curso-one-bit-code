@@ -14,6 +14,6 @@
   "author": "Pedro Gazola",
   "license": "ISC",
   "dependencies": {
-    "moment": "^2.29.3"
+    "moment": "^2.29.4"
   }
 }
