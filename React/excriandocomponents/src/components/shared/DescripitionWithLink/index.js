@@ -1,4 +1,7 @@
 const DescriptionWithLink = (props) => {
+    if (!props.text) {  // se nao tiver descriçao, nao mostra o componente
+        return null;
+    }
     if(props.link){
         return(
             <div>
