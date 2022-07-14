@@ -6,27 +6,25 @@ export default class Planets extends React.Component {
     super(props)
     this.state = {
       planets: [
-        {
-          name: "Mercurio",
-          text: "Mercúrio é o menor e mais interno planeta do Sistema Solar, orbitando o Sol a cada 87,969 dias terrestres. ",
-          link: "https://pt.wikipedia.org/wiki/Mercúrio_(planeta)",
-          img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Mercury_in_color_-_Prockter07-edit1.jpg/1024px-Mercury_in_color_-_Prockter07-edit1.jpg",
-        },
-        {
-          name:"Terra",
-          text:" A terra é o único planeta do Sistema Solar que não é um anel, e é o único que tem uma órbita circular.",
-          link:"https://pt.wikipedia.org/wiki/Terra",
-          img_url:"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/The_Blue_Marble_%28remastered%29.jpg/600px-The_Blue_Marble_%28remastered%29.jpg"
-        },
-        {
-          name: "Saturno",
-          text: "Saturno é o quinto planeta do Sistema Solar, e o maior dos quatro aneis. ",
-          link: "https://pt.wikipedia.org/wiki/Saturno",
-          img_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Saturn_during_Equinox.jpg/600px-Saturn_during_Equinox.jpg",
-        }
+        
         ]
       }
     }
+
+  async getPlanets() { 
+    //api/plantes.json
+      const response = await fetch('api/planets.json');
+      const data = await response.json();
+      return data;
+  }
+  componentDidMount() {
+    this.getPlanets().then(data => {
+      this.setState( state => ({
+        planets: data['planets']
+      }))
+    })
+  }
+
   showPlanet = () => {
     let new_Planets = [...this.state.planets];
     new_Planets.push(new_Planets[new_Planets.length - 1])
@@ -41,6 +39,7 @@ export default class Planets extends React.Component {
     this.setState(state=> ({
       planets: new_Planets
     }))
+  
   }
   render() {
     return (
@@ -63,5 +62,6 @@ export default class Planets extends React.Component {
     );
   }
 }
+
 
 
