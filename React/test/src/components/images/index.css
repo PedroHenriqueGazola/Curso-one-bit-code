@@ -1,0 +1,17 @@
+#imgflor {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: white;
+    padding: 0;
+}
+#pimg {
+    background-color: rgba(0, 0, 0, 0.418);
+    max-width: 800px;
+    margin-left: 80px;
+    padding-left: 20px;
+    font-size: 3.2vw;
+    line-height: 2em;
+    font-family: 'Sriracha', cursive;
+    font-weight: bold;
+}

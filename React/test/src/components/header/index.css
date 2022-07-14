@@ -1,0 +1,14 @@
+header {
+    background-color: #000;
+    color: white;
+    font-family: 'Passion One', cursive;
+    height: 300px;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+h1 {
+    margin: 0;
+    font-size: 10vw;
+}
