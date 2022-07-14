@@ -47,12 +47,14 @@ export default class Planets extends React.Component {
         <h1>Lista de planets</h1>
         <button onClick={this.removeLast}>Remover último</button>
         <button onClick={this.showPlanet}>Adicionar planeta</button>
-        {this.state.planets.map((planet) => {
+        {this.state.planets.map((planet, index) => {
           return  <Planet
+                  id  = {planet.id}
                   name= {planet.name}
                   text= {planet.text}
                   link= {planet.link}
                   img_url= {planet.img_url}
+                  key = {index}
         />
         }
       )}
