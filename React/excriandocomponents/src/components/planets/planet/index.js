@@ -1,43 +1,44 @@
 import GrayImg from "../../shared/gray_image";
 import DescriptionWithLink from "../../shared/DescripitionWithLink";
-import React from "react";
-class Planet extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            satellites: [],
-        };  
+import React, {useState, useEffect } from 'react';
+
+async function getSatellites(id) {
+    const response = await fetch(`api/${id}.json`);
+    const data = await response.json();
+    return data;
+}
+/*componentDidMount() {
+    this.getSatellites(this.props.id).then(data => {
+        this.setState(state => ({
+            satellites: data['satellites']
+        }))
     }
-    async getSatellites(id) {
-        const response = await fetch(`api/${id}.json`);
-        const data = await response.json();
-        return data;
-    }
-    componentDidMount() {
-        this.getSatellites(this.props.id).then(data => {
-            this.setState(state => ({
-                satellites: data['satellites']
-            }))
+    )
+}*/
+const  Planet = (props) =>   {
+    let title
+    const [satellites, setSatellites] = useState([]);
+    useEffect(() => {
+        getSatellites(props.id).then(data => {
+            setSatellites(data['satellites']);
         }
         )
-    }
-    render() {
-    let title;
-    if(this.props.titleWithUnderline){
-        title = <h4><u>{this.props.name}</u></h4>
+    });
+    if(props.titleWithUnderline){
+        title = <h4><u>{props.name}</u></h4>
     } else {
-        title = <h4>{this.props.name}</h4>
+        title = <h4>{props.name}</h4>
     }
     return (
         <div onClick = {() => {
-            this.props.clickOnPlanet(this.props.name);
+            props.clickOnPlanet(props.name);
         }}>
             {title}
-            <DescriptionWithLink text = { this.props.text} link = {this.props.link} />
-            <GrayImg img_url = {this.props.img_url} gray = {this.props.gray}/>
+            <DescriptionWithLink text = { props.text} link = {props.link} />
+            <GrayImg img_url = {props.img_url} gray = {props.gray}/>
             <h4>Satellites</h4>
             <ul>
-                {this.state.satellites.map((satellite, index) => {
+                {satellites.map((satellite, index) => {
                     return <li key={index}>{satellite.name}</li>
                     }
                     
@@ -49,7 +50,7 @@ class Planet extends React.Component {
             <hr/>
         </div>
 
-    )}
+    )
 }
 
 export default Planet;
