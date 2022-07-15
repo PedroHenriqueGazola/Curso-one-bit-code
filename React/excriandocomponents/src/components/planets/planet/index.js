@@ -30,9 +30,7 @@ const  Planet = (props) =>   {
         title = <h4>{props.name}</h4>
     }
     return (
-        <div onClick = {() => {
-            props.clickOnPlanet(props.name);
-        }}>
+        <div>
             {title}
             <DescriptionWithLink text = { props.text} link = {props.link} />
             <GrayImg img_url = {props.img_url} gray = {props.gray}/>
