@@ -13,7 +13,6 @@ const Planets = () => {
   useEffect(() => {
     getPlanets().then(data => {
       setPlanets(data['planets'])
-      
     })
   }, [])
   const addPlanet = (new_Planet) => {
